@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the project...'
+                // Commandes de compilation, par exemple :
+                // sh 'mvn clean package'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing the project...'
+                // Commandes de test, par exemple :
+                // sh 'mvn test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the project...'
+                // Commandes de déploiement, par exemple :
+                // sh 'scp target/*.jar user@server:/path/to/deploy'
+            }
+        }
+    }
+}
